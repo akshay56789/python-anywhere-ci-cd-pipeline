@@ -1,0 +1,113 @@
+.container-whole{
+    display: block;
+  
+}
+.entry{
+    
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: inherit;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    
+}
+.card-height{
+    height: 20rem;
+}
+
+.result{
+    
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: inherit;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.titlecss{
+    justify-content: center;
+}
+.map{
+    
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.navbarcss{
+    display: flex;
+}
+.navbarbody{
+    background-color: blue;
+}
+.ogdn{
+    display: block;
+}
+.imgsize{
+    height: 12rem;
+    width: 18rem;
+}
+@media only screen and (max-width: 556px) {
+    .container-whole {
+        display: block;
+    }
+    .card-height{
+        height: inherit;
+    }
+    
+  }
+
+  @media only screen and (min-width: 556px) {
+    .container-whole {
+        display: flex;
+    }
+    .entry{
+        width:50%;
+    }
+    .cardbodycss{
+        width: fit-content;
+    }
+    
+    .result{
+        width: 52%;
+    }
+    .ogdn{
+        display: flex;
+    }
+    .pdlf{
+        margin-left: 2rem;
+    }
+    .card-height{
+        height: 29rem;
+    }
+    .imgsize{
+        height: 22rem;
+        width: 42rem;
+    }
+    
+  }
+@media only screen and (min-width: 1024px) {
+    .container-whole-whole{
+        display: flex;
+    }
+    .entry{
+        width: 40%;
+    }
+    .result{
+        width: 50%;
+    }
+    .map{
+        width: 42%;
+        margin-right: 10rem;
+        margin-top: 2rem;
+    }
+    .container-whole{
+        
+        width: 60%;
+        justify-content: center;
+    }
+    .container-whole-whole{
+        justify-content: center;
+        margin-left: 2rem;
+    }
+  }

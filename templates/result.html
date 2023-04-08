@@ -1,0 +1,32 @@
+{% extends 'kanpurfare.html' %}
+{% block main %}
+<div class="container text-start">
+    <div class="ogdn">
+        <div>
+            <h4>Origin:</h4>
+            <h5>{{value1}}</h5>
+        </div>
+        <div>
+            <h4 class="pdlf">Destination:</h4>
+            <h5 class="pdlf">{{value2}}</h5>
+        </div>
+    </div>
+
+    <br>
+
+    <br>
+    <h3>FARE :₹{{result}}</h3>
+    <br>
+    <h3>Stations in between: {% if no1 == 0 %}{{no2}}{% else %}{{no1}}{% endif %}</h3>
+    <ul>
+        {% for i in list9 %}
+        <li>{{i}}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for j in list10 %}
+        <li>{{j}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock main %}
