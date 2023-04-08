@@ -3,10 +3,15 @@
 Metro Fare Calculator is a simple web application designed to help users calculate the fare for their metro rides. With this application, users can easily determine the cost of their metro ride based on their starting and ending stations.
 
 Metro Cities include:
+
 1.Kanpur
+
 2.Kochi
+
 3.Nagpur
+
 4.Jaipur
+
 More yet to come...
 
 The application is built using Django framework is designed to be responsive and easy to use. Users simply select their starting station and ending station from a dropdown menu, and the application calculates the fare based on the distance between the two stations.
