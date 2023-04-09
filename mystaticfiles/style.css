@@ -2,6 +2,7 @@
     display: block;
   
 }
+
 .entry{
     
     margin-top: 0.5rem;
@@ -55,6 +56,7 @@
         height: inherit;
     }
     
+    
   }
 
   @media only screen and (min-width: 556px) {
@@ -101,6 +103,7 @@
         margin-right: 10rem;
         margin-top: 2rem;
     }
+    
     .container-whole{
         
         width: 60%;

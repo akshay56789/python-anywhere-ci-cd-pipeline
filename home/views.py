@@ -295,16 +295,18 @@ def nagpurresult(request):
     #fare
     if(lststn_count == 1):
         price = 10
-    elif(1 < lststn_count <=3 ):
+    elif(1 < lststn_count <=2 ):
         price = 15
-    elif(3 < lststn_count  <=6):
+    elif(2 < lststn_count  <=3):
         price = 20
-    elif(6 < lststn_count <=9):
+    elif(3 < lststn_count <=8):
         price = 25
-    elif(9 < lststn_count <=15):
+    elif(8 < lststn_count <=13):
         price = 30
-    elif(15 < lststn_count <=18):
+    elif(13 < lststn_count <=15):
         price = 35
+    elif(15<lststn_count):
+        price = 41
     context = {'value1':new_value1,'value2':new_value2,'list':stnbtw_new,'no':stnbtw_count,'intc':intc,'fare':price}
     return render(request,'nagpurresult.html',context)
 
