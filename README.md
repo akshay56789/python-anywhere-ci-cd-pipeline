@@ -12,6 +12,10 @@ Metro Cities include:
 
 4.Jaipur
 
+5. Chennai
+
+6. Hyderabad 
+
 More yet to come...
 
 The application is built using Django framework is designed to be responsive and easy to use. Users simply select their starting station and ending station from a dropdown menu, and the application calculates the fare based on the distance between the two stations.
