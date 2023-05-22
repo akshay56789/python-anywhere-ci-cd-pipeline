@@ -61,3 +61,44 @@ class Jaipur_fare(models.Model):
 
     def __str__(self):
         return self.station_name
+    
+class Nagpur_fare(models.Model):
+    station_name = models.CharField(max_length=30)
+    khp = models.CharField(max_length=5)
+    nap = models.CharField(max_length=5)
+    sap = models.CharField(max_length=5)
+    aip = models.CharField(max_length=5)
+    ujn = models.CharField(max_length=5)
+    jpn = models.CharField(max_length=5)
+    cps = models.CharField(max_length=5)
+    ajs = models.CharField(max_length=5)
+    rhc = models.CharField(max_length=5)
+    cgn = models.CharField(max_length=5)
+    stb = models.CharField(max_length=5)
+    zm = models.CharField(max_length=5)
+    kcp = models.CharField(max_length=5)
+    gdg = models.CharField(max_length=5)
+    kdc = models.CharField(max_length=5)
+    nrr = models.CharField(max_length=5)
+    aus = models.CharField(max_length=5)
+    lmn = models.CharField(max_length=5)
+    ban = models.CharField(max_length=5)
+    vdn = models.CharField(max_length=5)
+    rrr = models.CharField(max_length=5)
+    sbn = models.CharField(max_length=5)
+    dpc = models.CharField(max_length=5)
+    lds = models.CharField(max_length=5)
+    sns = models.CharField(max_length=5)
+    ioe = models.CharField(max_length=5)
+    jrs = models.CharField(max_length=5)
+    nps = models.CharField(max_length=5)
+    dvs = models.CharField(max_length=5)
+    ags = models.CharField(max_length=5)
+    cts = models.CharField(max_length=5)
+    tpe = models.CharField(max_length=5)
+    abs = models.CharField(max_length=5)
+    vns = models.CharField(max_length=5)
+    pjn = models.CharField(max_length=5)
+
+    def __str__(self):
+        return self.station_name    

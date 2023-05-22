@@ -13,6 +13,12 @@ urlpatterns = [
     path('jaipur_result', views.jaipurresult, name='jaipurresult'),
     path('nagpur', views.nagpurfare, name='nagpurfare'),
     path('nagpur_result', views.nagpurresult, name='nagpurresult'),
+    path('add', views.add, name='add'),
+    path('adding', views.adding, name='adding'),
+    path('chennai_fare',views.chennaifare, name='chennaifare'),
+    path('chennai_result', views.chennairesult, name='chennairesult'),
+    path('hyderabad_fare',views.hyderabadfare, name='hyderabadfare'),
+    path('hyderabad_result',views.hyderabadresult, name='hyderabadresult')
     
 
 

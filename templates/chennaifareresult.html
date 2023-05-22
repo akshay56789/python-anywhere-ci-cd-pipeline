@@ -1,0 +1,31 @@
+{% extends 'chennaifare.html' %}
+{% block main %}
+<div class="container text-start">
+    <div class="ogdn">
+        <div>
+            <h4>Origin:</h4>
+            <h5>{{org}}</h5>
+        </div>
+        <div>
+            <h4 class="pdlf">Destination:</h4>
+            <h5 class="pdlf">{{dst}}</h5>
+        </div>
+    </div>
+
+    <br>
+
+    <br>
+    <h3>FARE :₹{{fare}}</h3>
+    <br>
+    <h3>Stations in between: {{stn_in_btw}}</h3>
+    <ul>
+        <li style="font-weight:bold;">{{org}}</li>
+        {% for i in list %}
+        <li>{{i}}</li>
+        {% endfor %}
+        <li style="font-weight: bolder;">{{dst}}</li>
+    </ul>
+    <span style="font-size: larger;font-weight: 500;">{{change}}</span>
+    <span style="font-size: larger;font-weight: 500;">{{change2}}</span>
+</div>
+{% endblock main %}

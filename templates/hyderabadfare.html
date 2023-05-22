@@ -1,0 +1,219 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metro Fare</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body
+    style="background-color: rgb(101,95,210);background: linear-gradient(90deg, rgba(101,95,210,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%)">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="/">Metro Fare Calculator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <h3 class="text-center text-light my-2">Hyderabad Metro</h3>
+    <div class="container-whole-whole">
+        <div class="container-whole">
+            <div class="entry">
+                <div class="card card-height">
+                    <div class="card-body entry-height">
+                        <div class="container text-center">
+                            <div>
+                                <h5 class="titlecss">Fare Calculator</h5>
+                            </div>
+                            <div>
+                                <form action="/hyderabad_result" method="get">
+                                    <h3>From</h3>
+                                    <select name="origin" id="origin" style="width:75%">
+                                        <option value='AMR'>Ameerpet</option>
+                                        <option value='ASM'>Assembly</option>
+                                        <option value='BGM'>Begumpet</option>
+                                        <option value='BLN'>Dr. BR Ambedkar Balanagar Metro Station</option>
+                                        <option value='BRN'>Bharat Nagar</option>
+                                        <option value='CKD'>Chikkadpally</option>
+                                        <option value='CMS'>Chaitanyapuri Metro</option>
+                                        <option value='DGC'>Durgam Cheruvu</option>
+                                        <option value='DSK'>Dilsukhnagar</option>
+                                        <option value='ERG'>Erragadda</option>
+                                        <option value='ESI'>ESI Hospital</option>
+                                        <option value='GCS'>Yusufguda</option>
+                                        <option value='GDB'>Gandhi Bhavan</option>
+                                        <option value='GHP'>Gandhi Hospital</option>
+                                        <option value='HBS'>Habsiguda</option>
+                                        <option value='HTC'>HITEC City</option>
+                                        <option value='IMM'>Irrum Manzil</option>
+                                        <option value='JBS'>JBS Parade Ground</option>
+                                        <option value='JHC'>Jubilee Hills Check Post</option>
+                                        <option value='JNC'>JNTU College</option>
+                                        <option value='KPH'>KPHB Colony</option>
+                                        <option value='KRT'>Khairatabad</option>
+                                        <option value='KTP'>Kukatpally</option>
+                                        <option value='LBN'>LB Nagar</option>
+                                        <option value='LKD'>Lakdikapul</option>
+                                        <option value='MDN'>Madhura Nagar</option>
+                                        <option value='MDP'>Madhapur</option>
+                                        <option value='MGB'>MG Bus Station</option>
+                                        <option value='MKP'>Malakpet</option>
+                                        <option value='MRB'>Musarambagh</option>
+                                        <option value='MSH'>Musheerabad</option>
+                                        <option value='MSP'>Moosapet</option>
+                                        <option value='MTG'>Mettuguda</option>
+                                        <option value='MYP'>Miyapur</option>
+                                        <option value='NGL'>Nagole</option>
+                                        <option value='NGR'>Ngri</option>
+                                        <option value='NMP'>Nampally</option>
+                                        <option value='NMR'>New Market</option>
+                                        <option value='NYN'>Narayanaguda</option>
+                                        <option value='OMC'>Osmania Medical College</option>
+                                        <option value='PDG'>Peddamma Gudi</option>
+                                        <option value='PJG'>Panjagutta</option>
+                                        <option value='PKN'>Prakash Nagar</option>
+                                        <option value='PRD'>Paradise</option>
+                                        <option value='PRG'>Parade Ground</option>
+                                        <option value='RDG'>Raidurg</option>
+                                        <option value='RJH'>Road No. 5 Jubilee Hills</option>
+                                        <option value='RSL'>Rasoolpura</option>
+                                        <option value='RTC'>RTC X Roads</option>
+                                        <option value='SCW'>Secunderabad West</option>
+                                        <option value='SEM'>Secunderabad East Metro Station</option>
+                                        <option value='SLB'>Sultan Bazaar</option>
+                                        <option value='SRN'>S R Nagar</option>
+                                        <option value='STD'>Stadium</option>
+                                        <option value='TNK'>Tarnaka</option>
+                                        <option value='UPL'>Uppal</option>
+                                        <option value='VML'>Victoria Memorial</option>
+
+
+                                    </select>
+                                    <h3 class="my-3">To</h3>
+                                    <select name="dest" id="dest" style="width:75%">
+                                        <option value='AMR'>Ameerpet</option>
+                                        <option value='ASM'>Assembly</option>
+                                        <option value='BGM'>Begumpet</option>
+                                        <option value='BLN'>Dr. BR Ambedkar Balanagar Metro Station</option>
+                                        <option value='BRN'>Bharat Nagar</option>
+                                        <option value='CKD'>Chikkadpally</option>
+                                        <option value='CMS'>Chaitanyapuri Metro</option>
+                                        <option value='DGC'>Durgam Cheruvu</option>
+                                        <option value='DSK'>Dilsukhnagar</option>
+                                        <option value='ERG'>Erragadda</option>
+                                        <option value='ESI'>ESI Hospital</option>
+                                        <option value='GCS'>Yusufguda</option>
+                                        <option value='GDB'>Gandhi Bhavan</option>
+                                        <option value='GHP'>Gandhi Hospital</option>
+                                        <option value='HBS'>Habsiguda</option>
+                                        <option value='HTC'>HITEC City</option>
+                                        <option value='IMM'>Irrum Manzil</option>
+                                        <option value='JBS'>JBS Parade Ground</option>
+                                        <option value='JHC'>Jubilee Hills Check Post</option>
+                                        <option value='JNC'>JNTU College</option>
+                                        <option value='KPH'>KPHB Colony</option>
+                                        <option value='KRT'>Khairatabad</option>
+                                        <option value='KTP'>Kukatpally</option>
+                                        <option value='LBN'>LB Nagar</option>
+                                        <option value='LKD'>Lakdikapul</option>
+                                        <option value='MDN'>Madhura Nagar</option>
+                                        <option value='MDP'>Madhapur</option>
+                                        <option value='MGB'>MG Bus Station</option>
+                                        <option value='MKP'>Malakpet</option>
+                                        <option value='MRB'>Musarambagh</option>
+                                        <option value='MSH'>Musheerabad</option>
+                                        <option value='MSP'>Moosapet</option>
+                                        <option value='MTG'>Mettuguda</option>
+                                        <option value='MYP'>Miyapur</option>
+                                        <option value='NGL'>Nagole</option>
+                                        <option value='NGR'>Ngri</option>
+                                        <option value='NMP'>Nampally</option>
+                                        <option value='NMR'>New Market</option>
+                                        <option value='NYN'>Narayanaguda</option>
+                                        <option value='OMC'>Osmania Medical College</option>
+                                        <option value='PDG'>Peddamma Gudi</option>
+                                        <option value='PJG'>Panjagutta</option>
+                                        <option value='PKN'>Prakash Nagar</option>
+                                        <option value='PRD'>Paradise</option>
+                                        <option value='PRG'>Parade Ground</option>
+                                        <option value='RDG'>Raidurg</option>
+                                        <option value='RJH'>Road No. 5 Jubilee Hills</option>
+                                        <option value='RSL'>Rasoolpura</option>
+                                        <option value='RTC'>RTC X Roads</option>
+                                        <option value='SCW'>Secunderabad West</option>
+                                        <option value='SEM'>Secunderabad East Metro Station</option>
+                                        <option value='SLB'>Sultan Bazaar</option>
+                                        <option value='SRN'>S R Nagar</option>
+                                        <option value='STD'>Stadium</option>
+                                        <option value='TNK'>Tarnaka</option>
+                                        <option value='UPL'>Uppal</option>
+                                        <option value='VML'>Victoria Memorial</option>
+                                    </select>
+                                    <br>
+                                    <button type="submit" class="btn btn-primary my-5">Check fare</button>
+                                    <a class="btn btn-primary" href="#" role="button">Check Timings</a>
+                                </form>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="result">
+                <div class="card ">
+                    <div class="card-body cardbodycss">
+                        {% block main %}
+
+                        {% endblock main %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <a
+                href="https://www.ltmetro.com/wp-content/uploads/2021/03/Network-Map-small-min.jpg"><img
+                    class="imgsize" src="{% static '1200px-Hyderabad_Metro_Route_Map.png'%}" alt=""></a>
+        </div>
+    </div>
+    <div class="card text-center" style="margin-top: 9rem;">
+        <div class="card-body ">
+            <h5 class="card-title">Metro fare Calculator</h5>
+            <p class="card-text">Unofficial Metro fare calculator</p>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
