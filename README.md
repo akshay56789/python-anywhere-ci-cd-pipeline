@@ -12,9 +12,9 @@ Metro Cities include:
 
 4.Jaipur
 
-5. Chennai
+5.Chennai
 
-6. Hyderabad 
+6.Hyderabad 
 
 More yet to come...
 
