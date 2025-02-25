@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: Send Bash Command to PythonAnywhere
         run: |
-          curl -X POST -u "${{ secrets.PA_USERNAME }}:${{ secrets.PA_API_TOKEN }}" \
-          "https://www.pythonanywhere.com/api/v0/user/${{ secrets.PA_USERNAME }}/consoles/38366532/send_input/" \
-          -H "Content-Type: application/json" \
-          --data '{"input": "ls -la\n"}'
+          curl -s -X POST \
+        "https://www.pythonanywhere.com/api/v0/user/${{ secrets.PA_USERNAME }}/consoles/38366532/send_input/" \
+        -H "Authorization: Token ${{ secrets.PA_API_TOKEN }}" \
+        -H "Content-Type: application/json" \
+        --data '{"input": "ls -la\n"}'
