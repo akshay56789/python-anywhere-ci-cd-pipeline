@@ -13,7 +13,7 @@ jobs:
       - name: Send Bash Command to PythonAnywhere
         run: |
           curl -s -X POST \
-          "https://www.pythonanywhere.com/api/v0/user/${{ secrets.PA_USERNAME }}/consoles/" \
+          "https://www.pythonanywhere.com/api/v0/user/${{ secrets.PA_USERNAME }}/" \
           -H "Authorization: Token ${{ secrets.PA_API_TOKEN }}" \
           -H "Content-Type: application/json" 
           
