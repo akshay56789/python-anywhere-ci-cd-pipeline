@@ -1,0 +1,174 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metro Fare</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body style="background: rgb(255,136,0);
+    background: linear-gradient(90deg, rgba(255,136,0,1) 0%, rgba(255,160,44,1) 49%, rgba(255,211,107,1) 100%);">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="/">Metro Fare Calculator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/jaipur_fare">Jaipur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/kanpur">Kanpur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/kochi_fare">Kochi</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <h3 class="text-center text-light my-2">Nagpur Metro</h3>
+    <div class="container-whole-whole">
+        <div class="container-whole">
+            <div class="entry">
+                <div class="card card-height">
+                    <div class="card-body entry-height">
+                        <div class="container text-center">
+                            <div>
+                                <h5 class="titlecss">Fare Calculator</h5>
+                            </div>
+                            <div>
+                                <form action="/nagpur_result" method="get">
+                                    <h3>From</h3>
+                                    <select name="origin" id="origin">
+                                        <option value="ags">Agrasen Chowk</option>
+                                        <option value="aip">Airport</option>
+                                        <option value="sap">Airport South</option>
+                                        <option value="ajs">Ajni Square</option>
+                                        <option value="abs">Ambedkar Chowk</option>
+                                        <option value="aus">Automotive Square</option>
+                                        <option value="ban">Bansi Nagar</option>
+                                        <option value="cps">Chhatrapati Sqaure</option>
+                                        <option value="cts">Chitar Oli Square</option>
+                                        <option value="cgn">Congress Nagar</option>
+                                        <option value="dpc">Dharampeth College</option>
+                                        <option value="dvs">Dosar Vaishya Square</option>
+                                        <option value="gdg">Gaddigodam Square</option>
+                                        <option value="ioe">Institution of Engineers</option>
+                                        <option value="jpn">Jaiprakash Nagar</option>
+                                        <option value="jrs">Jhansi Rani Square</option>
+                                        <option value="kdc">Kadbi Chowk</option>
+                                        <option value="kcp">Kasturchand Park</option>
+                                        <option value="khp">Khapri</option>
+                                        <option value="lds">LAD Chowk</option>
+                                        <option value="lmn">Lokmanya Nagar</option>
+                                        <option value="nps">Nagpur Railway Station</option>
+                                        <option value="nrr">Nari Road</option>
+                                        <option value="nap">New Airport</option>
+                                        <option value="pjn">Prajapati Nagar</option>
+                                        <option value="rrr">Rachana Ring Road</option>
+                                        <option value="rhc">Rahate Colony</option>
+                                        <option value="sns">Shankar Nagar Square</option>
+                                        <option value="stb">Sitabuldi</option>
+                                        <option value="sbn">Subhash Nagar</option>
+                                        <option value="tpe">Telephone Exchange</option>
+                                        <option value="ujn">Ujwal Nagar</option>
+                                        <option value="vns">Vaishnao Devi Chowk</option>
+                                        <option value="vdn">Vasudev Nagar</option>
+                                        <option value="zm">Zero Mile Freedom Park</option>
+                                    </select>
+                                    <h3 class="my-3">To</h3>
+                                    <select name="dest" id="dest">
+                                        <option value="ags">Agrasen Chowk</option>
+                                        <option value="aip">Airport</option>
+                                        <option value="sap">Airport South</option>
+                                        <option value="ajs">Ajni Square</option>
+                                        <option value="abs">Ambedkar Chowk</option>
+                                        <option value="aus">Automotive Square</option>
+                                        <option value="ban">Bansi Nagar</option>
+                                        <option value="cps">Chhatrapati Sqaure</option>
+                                        <option value="cts">Chitar Oli Square</option>
+                                        <option value="cgn">Congress Nagar</option>
+                                        <option value="dpc">Dharampeth College</option>
+                                        <option value="dvs">Dosar Vaishya Square</option>
+                                        <option value="gdg">Gaddigodam Square</option>
+                                        <option value="ioe">Institution of Engineers</option>
+                                        <option value="jpn">Jaiprakash Nagar</option>
+                                        <option value="jrs">Jhansi Rani Square</option>
+                                        <option value="kdc">Kadbi Chowk</option>
+                                        <option value="kcp">Kasturchand Park</option>
+                                        <option value="khp">Khapri</option>
+                                        <option value="lds">LAD Chowk</option>
+                                        <option value="lmn">Lokmanya Nagar</option>
+                                        <option value="nps">Nagpur Railway Station</option>
+                                        <option value="nrr">Nari Road</option>
+                                        <option value="nap">New Airport</option>
+                                        <option value="pjn">Prajapati Nagar</option>
+                                        <option value="rrr">Rachana Ring Road</option>
+                                        <option value="rhc">Rahate Colony</option>
+                                        <option value="sns">Shankar Nagar Square</option>
+                                        <option value="stb">Sitabuldi</option>
+                                        <option value="sbn">Subhash Nagar</option>
+                                        <option value="tpe">Telephone Exchange</option>
+                                        <option value="ujn">Ujwal Nagar</option>
+                                        <option value="vns">Vaishnao Devi Chowk</option>
+                                        <option value="vdn">Vasudev Nagar</option>
+                                        <option value="zm">Zero Mile Freedom Park</option>
+                                    </select>
+                                    <br>
+                                    <button type="submit" class="btn btn-primary my-5">Check fare</button>
+                                    <a class="btn btn-primary" href="/timings" role="button">Check Timings</a>
+                                </form>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="result">
+                <div class="card ">
+                    <div class="card-body cardbodycss">
+                        {% block main %}
+
+                        {% endblock main %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1Abjh72BYbNo2snTpBhWCWTtzLtEvbhly&ehbc=2E312F"
+                style=" width: 100%; height: 348px;"></iframe>
+        </div>
+    </div>
+    <div class="card text-center" style="margin-top: 9rem;">
+        <div class="card-body ">
+            <h5 class="card-title">Metro fare Calculator</h5>
+            <p class="card-text">Unofficial Metro fare calculator</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
