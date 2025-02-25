@@ -15,5 +15,5 @@ jobs:
           curl -s -X POST \
           "https://www.pythonanywhere.com/api/v0/user/${{ secrets.PA_USERNAME }}/consoles/" \
           -H "Authorization: Token ${{ secrets.PA_API_TOKEN }}" \
-          -H "Content-Type: application/json" \
-          --data 
+          -H "Content-Type: application/json" 
+          
