@@ -18,7 +18,7 @@ jobs:
         curl -s -X POST \
         "https://www.pythonanywhere.com/api/v0/user/${{ secrets.PA_USERNAME }}/consoles/38366532/send_input/" \
         -H "Authorization: Token ${{ secrets.PA_API_TOKEN }}" \
-        -d '{"input": "cd metro-fare-calculator && git pull origin main\n"}' \
+        -d '{"input": "cd metro-fare-calculator && git pull origin master\n"}' \
         -H "Content-Type: application/json"
 
           
