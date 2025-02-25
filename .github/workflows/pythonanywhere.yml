@@ -1,4 +1,4 @@
-name: Automate PythonAnywhere Bash Shell
+name: Deploy to PythonAnywhere
 
 on:
   push:
@@ -6,14 +6,19 @@ on:
       - master
 
 jobs:
-  run_pythonanywhere:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Send Bash Command to PythonAnywhere
-        run: |
-          curl -s -X GET \
-          "https://www.pythonanywhere.com/api/v0/user/${{ secrets.PA_USERNAME }}/webapps/" \
-          -H "Authorization: Token ${{ secrets.PA_API_TOKEN }}" \
-          -H "Content-Type: application/json" 
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Update code on PythonAnywhere
+      run: |
+        curl -s -X POST \
+        "https://www.pythonanywhere.com/api/v0/user/${{ secrets.PA_USERNAME }}/consoles/38366532/send_input/" \
+        -H "Authorization: Token ${{ secrets.PA_API_TOKEN }}" \
+        -d '{"input": "cd metro-fare-calculator && git pull origin main\n"}' \
+        -H "Content-Type: application/json"
+
           
