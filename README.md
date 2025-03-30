@@ -31,6 +31,7 @@ Open the Bash console on PythonAnywhere and run the following commands:
 git clone https://github.com/yourusername/yourrepository.git
 cd yourrepository
 ```
+First of all, ensure that your web app runs without any issues.
 
 ## 4. Automate Deployment Using GitHub Actions
 
