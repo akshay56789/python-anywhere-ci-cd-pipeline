@@ -124,7 +124,7 @@ touch /var/www/your_username_pythonanywhere_com_wsgi.py
 This guide helps automate deployment from GitHub to PythonAnywhere using API calls. Once set up, every push to GitHub updates the PythonAnywhere project automatically and reloads the web app. 🚀
 
 Testing the CI/CD pipeline:
-AKshay
+Edit this line and the changes will be reflected in website's python anywhere repository code.
 
 
 
