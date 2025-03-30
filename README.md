@@ -95,6 +95,7 @@ jobs:
 2. Go to **GitHub → Actions** and verify the workflow execution.
 3. If successful, check your PythonAnywhere project for the updated code.
 4. The web app will automatically reload after deployment.
+5. **If your web app does not reflect the changes you made, then check the bash console by opening your pythonAnywhere dashboard and check whether the directory is correct. for eg./your_repo_name (master)$. Again run the workflow.
 
 ## 6. Manual Deployment (If Needed)
 
