@@ -71,7 +71,7 @@ jobs:
     - name: Update code on PythonAnywhere
       run: |
         curl -s -X POST \
-        "https://www.pythonanywhere.com/api/v0/user/${{ secrets.PA_USERNAME }}/consoles/38366532/send_input/" \
+        "https://www.pythonanywhere.com/api/v0/user/${{ secrets.PA_USERNAME }}/consoles/${{secrets.PA_CONSOLE_NUMBER}}/send_input/" \
         -H "Authorization: Token ${{ secrets.PA_API_TOKEN }}" \
         -d '{"input": "git pull origin master\n"}' \
         -H "Content-Type: application/json"
